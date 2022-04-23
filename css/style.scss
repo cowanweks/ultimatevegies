@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(189, 189, 189, 0.76);
+}
+#n #navbar {
+  display: flex;
+  user-select: none;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  width: inherit;
+  border: none;
+  padding-right: 15px;
+  padding-left: 4px;
+  background: rgba(4, 116, 91, 1);
+}
+#navbar #logo {
+  display: flex;
+  align-items: center;
+}
+#navbar #logo svg {
+  height: 32px;
+  width: 32px;
+}
+#navbar #logo #caption {
+  color: #fff;
+  opacity: 0.83;
+  font-size: 13px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+#navbar #controls {
+  width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navbar #controls svg {
+  cursor: pointer;
+}
+#navbar #controls:not(:last-child) {
+  margin-right: 15px;
+}
+#navbar #controls #search {
+  position: relative;
+}
+#navbar #controls #search input[type="text"] {
+  border-radius: 25px;
+  height: 28px;
+  outline: none;
+  border: none;
+  color: rgba(27, 27, 146, 0.644);
+  background: rgba(243, 243, 243, 0.75);
+  text-align: center;
+  padding: 0px 10px;
+}
+#navbar #controls #search svg {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  height: 20px;
+}
+#navbar #controls #vegies {
+  position: relative;
+}
+#navbar #controls #vegies #tooltip {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 45px;
+  left: -25px;
+  padding: 5px;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 10px;
+  width: fit-content;
+  pointer-events: none;
+  background: rgba(4, 116, 91, 1);
+  white-space: nowrap;
+  z-index: 4;
+}
+#navbar #controls #vegies #tooltip::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-top: 4px;
+  border-right: 4px;
+  z-index: -1;
+  background: rgba(4, 116, 91, 1);
+  transform: rotate(45deg);
+}
+#navbar #controls #vegies:hover > #tooltip {
+  opacity: 1;
+}
+#navbar #controls #vegies svg {
+  height: 25px;
+  width: 25px;
+}
+#navbar #controls #cart svg {
+  height: 25px;
+  width: 25px;
+}
+#navbar #controls #signup button {
+  position: relative;
+  transition: scale 0.3s;
+  transform-origin: center;
+  height: 28px;
+  width: 70px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(4, 116, 91, 1);
+  border-radius: 50px;
+}
+#navbar #controls #signup button:hover {
+  transform: scale(1.05);
+  color: rgba(0, 71, 155, 1);
+}
+#navbar #controls svg:hover {
+  transform: scale(1.05);
+  color: rgba(0, 71, 155, 1);
+}
+#navbar #controls #avatar {
+  position: relative;
+  outline: none;
+}
+#navbar #controls #avatar svg {
+  height: 25px;
+  width: 25px;
+}
+#navbar #controls #avatar #dropdown {
+  display: none;
+}
+#navbar #controls #avatar #dropdown:checked + #dropdowncontent {
+  display: block;
+  transform: translateY(0);
+}
+#navbar #controls #avatar #dropdowncontent .blured {
+  transform: translateY(-250px);
+}
+#navbar #controls #avatar #dropdowncontent {
+  position: absolute;
+  display: flex;
+  transition: all 0.3s ease;
+  transform-origin: right;
+  transform: translateY(-250px);
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  top: 40px;
+  right: 1px;
+  padding: 14px 4px;
+  height: 150px;
+  width: 110px;
+  background: rgba(4, 116, 92, 0.849);
+  z-index: 4;
+}
+#navbar #controls #avatar #dropdowncontent div {
+  // height: 10px;
+  cursor: pointer;
+  color: #fff;
+  padding: 2px 4px;
+  border-bottom: 1px solid #fff;
+}
+#navbar #controls #avatar #dropdowncontent div img {
+  height: 20px;
+}
+#content #courosel {
+  position: relative;
+  height: 430px;
+  width: 100vw;
+}
+#content #courosel::before {
+  content: "";
+  position: absolute;
+  height: 430px;
+  width: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+}
+#content #courosel img {
+  position: absolute;
+  height: 430px;
+  object-fit: cover;
+}
+#content #courosel #elipses {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  z-index: 4;
+}
+#content #courosel #elipses div {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 4px;
+  border-radius: 100px;
+  border: none;
+  background: rgba(255, 255, 255, 0.568);
+}
+#content #courosel #elipses .current {
+  background: #fff;
+}
+#content #listings {
+  display: flex;
+  justify-content: space-between;
+  height: 189px;
+  padding: 15px;
+  background: transparent;
+}
+#content #listings .listing {
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+  background: rgba(4, 116, 92, 0.849);
+}

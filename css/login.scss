@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.77);
+  z-index: 1;
+}
+body img {
+  position: absolute;
+  height: 430px;
+  object-fit: cover;
+}
+form#login {
+  height: 500px;
+  width: 350px;
+  display: flex;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(65, 155, 135, 0.27),
+    rgba(177, 136, 136, 0.32)
+  );
+  z-index: 2;
+}
+form#login #title {
+  position: relative;
+  margin: 40px 0px 20px 20px;
+}
+form#login #title::before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.76);
+}
+form#login #title::after {
+  background: rgba(255, 255, 255, 0.76);
+  content: "";
+  position: absolute;
+  right: 18px;
+  height: 10px;
+  border-radius: 50px;
+  width: 100px;
+}
+form#login #title span {
+  color: #fff;
+  font-weight: 900;
+  width: fit-content;
+  //   text-align: center;
+  position: absolute;
+  left: 40%;
+  top: -1;
+}
+form#login label {
+  color: #fff;
+  font-size: 20pts;
+  margin: 5px 20px;
+}
+form#login input {
+  padding: 0px 20px;
+  text-align: center;
+  background: rgba(192, 203, 200, 0.8);
+}
+:is(input, button) {
+  height: 36px;
+  border: none;
+  outline: none;
+  margin: 15px 10px;
+  border-radius: 50px;
+}
+form#login label:last-of-type {
+  cursor: pointer;
+}
+form#login label input[type="checkbox"] {
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+  margin: 4px;
+}
+form#login button {
+  transition: background 0.2s ease-in-out;
+  color: #04745b;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.7);
+}
+form#login button:hover {
+  background: #03614cb6;
+  color: #fff;
+}
+form#login > span {
+  color: #c1c1c1;
+  font-size: 20pts;
+  margin: 15px 10px;
+}
+form#login > span a {
+  color: rgb(95, 95, 233);
+}
+form#login #btnlogin a {
+  height: 40px;
+  width: 100px;
+}

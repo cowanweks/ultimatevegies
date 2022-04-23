@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(189, 189, 189, 0.76);
+}
+
+#navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 44px;
+  width: inherit;
+  border: none;
+  padding-right: 15px;
+  padding-left: 4px;
+  background: #04745b;
+}
+
+#navbar #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar #logo svg {
+  height: 32px;
+  width: 32px;
+}
+
+#navbar #logo #caption {
+  color: #fff;
+  opacity: 0.83;
+  font-size: 13px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#navbar #controls {
+  width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#navbar #controls svg {
+  cursor: pointer;
+}
+
+#navbar #controls:not(:last-child) {
+  margin-right: 15px;
+}
+
+#navbar #controls #search {
+  position: relative;
+}
+
+#navbar #controls #search input[type="text"] {
+  border-radius: 25px;
+  height: 28px;
+  outline: none;
+  border: none;
+  color: rgba(27, 27, 146, 0.644);
+  background: rgba(243, 243, 243, 0.75);
+  text-align: center;
+  padding: 0px 10px;
+}
+
+#navbar #controls #search svg {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  height: 20px;
+}
+
+#navbar #controls #vegies {
+  position: relative;
+}
+
+#navbar #controls #vegies #tooltip {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 45px;
+  left: -25px;
+  padding: 5px;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  pointer-events: none;
+  background: #04745b;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+#navbar #controls #vegies #tooltip::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-top: 4px;
+  border-right: 4px;
+  z-index: -1;
+  background: #04745b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#navbar #controls #vegies:hover > #tooltip {
+  opacity: 1;
+}
+
+#navbar #controls #vegies svg {
+  height: 25px;
+  width: 25px;
+}
+
+#navbar #controls #cart svg {
+  height: 25px;
+  width: 25px;
+}
+
+#navbar #controls #signup button {
+  position: relative;
+  -webkit-transition: scale 0.3s;
+  transition: scale 0.3s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  height: 28px;
+  width: 70px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #04745b;
+  border-radius: 50px;
+}
+
+#navbar #controls #signup button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #00479b;
+}
+
+#navbar #controls svg:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #00479b;
+}
+
+#navbar #controls #avatar {
+  position: relative;
+  outline: none;
+}
+
+#navbar #controls #avatar svg {
+  height: 25px;
+  width: 25px;
+}
+
+#navbar #controls #avatar #dropdown {
+  display: none;
+}
+
+#navbar #controls #avatar #dropdown:checked + #dropdowncontent {
+  display: block;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#navbar #controls #avatar #dropdowncontent .blured {
+  -webkit-transform: translateY(-250px);
+          transform: translateY(-250px);
+}
+
+#navbar #controls #avatar #dropdowncontent {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: translateY(-250px);
+          transform: translateY(-250px);
+  border-radius: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 40px;
+  right: 1px;
+  padding: 14px 4px;
+  height: 150px;
+  width: 110px;
+  background: rgba(4, 116, 92, 0.849);
+  z-index: 4;
+}
+
+#navbar #controls #avatar #dropdowncontent div {
+  cursor: pointer;
+  color: #fff;
+  padding: 2px 4px;
+  border-bottom: 1px solid #fff;
+}
+
+#navbar #controls #avatar #dropdowncontent div img {
+  height: 20px;
+}
+
+#content #courosel {
+  position: relative;
+  height: 430px;
+  width: 100vw;
+}
+
+#content #courosel::before {
+  content: "";
+  position: absolute;
+  height: 430px;
+  width: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#content #courosel img {
+  position: absolute;
+  height: 430px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#content #courosel #elipses {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 4;
+}
+
+#content #courosel #elipses div {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 4px;
+  border-radius: 100px;
+  border: none;
+  background: rgba(255, 255, 255, 0.568);
+}
+
+#content #courosel #elipses .current {
+  background: #fff;
+}
+
+#content #listings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 189px;
+  padding: 15px;
+  background: transparent;
+}
+
+#content #listings .listing {
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+  background: rgba(4, 116, 92, 0.849);
+}
